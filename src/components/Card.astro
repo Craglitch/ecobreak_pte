@@ -1,0 +1,112 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imagePosition?: 'top' | 'left' | 'right' | 'bottom';
+  link?: string;
+  linkText?: string;
+  tags?: string[];
+  bgColor?: string;
+  icon?: string;
+  badge?: string;
+}
+
+const {
+  title,
+  description,
+  imageSrc,
+  imageAlt = 'Card image',
+  imagePosition = 'top',
+  link,
+  linkText = 'Ketahui lebih lanjut →',
+  tags = [],
+  bgColor = 'bg-white',
+  icon,
+  badge,
+} = Astro.props;
+
+// Determine image position classes
+const positionClasses = {
+  top: 'flex-col',
+  left: 'flex-col md:flex-row',
+  right: 'flex-col md:flex-row-reverse',
+  bottom: 'flex-col-reverse',
+};
+
+const imageWrapperClasses = {
+  top: 'w-full',
+  left: 'md:w-1/2 w-full',
+  right: 'md:w-1/2 w-full',
+  bottom: 'w-full',
+};
+---
+
+<div class={`${bgColor} rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group ${positionClasses[imagePosition]} flex border border-green-100/50 hover:border-green-300 hover:-translate-y-2`}>
+  
+  <!-- Image Section -->
+  {imageSrc && (
+    <div class={`${imageWrapperClasses[imagePosition]} overflow-hidden`}>
+      <img 
+        src={imageSrc} 
+        alt={imageAlt} 
+        class="w-full h-48 md:h-56 lg:h-64 object-contain bg-green-50/30"
+        loading="lazy"
+      />
+    </div>
+  )}
+
+  <!-- Content Section -->
+  <div class="flex-1 p-6 md:p-8 flex flex-col">
+    <!-- Badge -->
+    {badge && (
+      <div class="mb-3">
+        <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">
+          {badge}
+        </span>
+      </div>
+    )}
+
+    <!-- Icon -->
+    {icon && (
+      <div class="text-3xl mb-3">
+        {icon}
+      </div>
+    )}
+
+    <!-- Title -->
+    <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-2">
+      {title}
+    </h3>
+
+    <!-- Description -->
+    {description && (
+      <p class="text-gray-600 leading-relaxed flex-1">
+        {description}
+      </p>
+    )}
+
+    <!-- Tags -->
+    {tags.length > 0 && (
+      <div class="flex flex-wrap gap-2 mt-4">
+        {tags.map((tag) => (
+          <span class="text-xs bg-green-50 text-green-700 px-3 py-1 rounded-full border border-green-100">
+            {tag}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- Link -->
+    {link && (
+      <a 
+        href={link} 
+        class="mt-4 inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-800 transition-colors group/link"
+      >
+        {linkText}
+        <span class="group-hover/link:translate-x-1 transition-transform">→</span>
+      </a>
+    )}
+  </div>
+</div>
