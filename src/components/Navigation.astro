@@ -3,17 +3,23 @@ const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/' || currentPath === '';
 const isAbout = currentPath === '/about';
 const isSej = currentPath === '/sej';
+
+// Import logo from src/assets
+import logo from "../assets/logo.jpg";
 ---
 
-<!-- Remove all inline font-family styles -->
 <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-green-100/30">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center gap-2 group">
-          <span class="text-2xl">🌿</span>
-          <!-- Removed inline font-family -->
+          <!-- Use imported logo -->
+          <img 
+            src={logo.src} 
+            alt="EcoBrick Logo" 
+            class="h-8 w-8 md:h-10 md:w-10 object-contain"
+          />
           <span class="text-green-800 font-bold text-xl tracking-tight">
             EcoBrick
           </span>
@@ -23,7 +29,8 @@ const isSej = currentPath === '/sej';
         </a>
       </div>
 
-      <div class="flex space-x-1 sm:space-x-2">
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex space-x-1 sm:space-x-2">
         <a 
           href="/" 
           class:list={[
@@ -44,11 +51,12 @@ const isSej = currentPath === '/sej';
             'tracking-wide',
             isAbout 
               ? 'bg-green-800 text-white shadow-lg shadow-green-800/20' 
-              : 'text-green-700 hover:bg-green-50 hover:txt-green-900'
+              : 'text-green-700 hover:bg-green-50 hover:text-green-900'
           ]}
         >
           ℹ️ About
         </a>
+        
         <a 
           href="/sej" 
           class:list={[
@@ -56,15 +64,90 @@ const isSej = currentPath === '/sej';
             'tracking-wide',
             isSej
               ? 'bg-green-800 text-white shadow-lg shadow-green-800/20' 
-              : 'text-green-700 hover:bg-green-50 hover:txt-green-900'
+              : 'text-green-700 hover:bg-green-50 hover:text-green-900'
           ]}
         >
           📜 Sej
-
         </a>
+      </div>
 
+      <!-- Mobile Hamburger Menu -->
+      <div class="md:hidden">
+        <button 
+          id="menu-toggle"
+          class="p-2 rounded-lg text-green-700 hover:bg-green-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500"
+          aria-label="Toggle menu"
+        >
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
 
     </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="md:hidden hidden py-2 border-t border-green-100/30">
+      <div class="flex flex-col space-y-1">
+        <a 
+          href="/" 
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300',
+            'tracking-wide',
+            isHome 
+              ? 'bg-green-800 text-white' 
+              : 'text-green-700 hover:bg-green-50 hover:text-green-900'
+          ]}
+        >
+          🏠 Home
+        </a>
+
+        <a 
+          href="/about" 
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300',
+            'tracking-wide',
+            isAbout 
+              ? 'bg-green-800 text-white' 
+              : 'text-green-700 hover:bg-green-50 hover:text-green-900'
+          ]}
+        >
+          ℹ️ About
+        </a>
+        
+        <a 
+          href="/sej" 
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300',
+            'tracking-wide',
+            isSej
+              ? 'bg-green-800 text-white' 
+              : 'text-green-700 hover:bg-green-50 hover:text-green-900'
+          ]}
+        >
+          📜 Sej
+        </a>
+      </div>
+    </div>
   </div>
 </nav>
+
+<script>
+  // Mobile menu toggle functionality
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when a link is clicked
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+</script>
