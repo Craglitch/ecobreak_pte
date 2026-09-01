@@ -1,3 +1,4 @@
+
 ---
 import Layout from "../layouts/Layout.astro";
 
@@ -6,146 +7,183 @@ import heroVideo from "../assets/eco.mp4";
 ---
 
 <Layout>
-  <section class="relative overflow-hidden min-h-screen">
+  <section class="relative min-h-screen overflow-hidden bg-gradient-to-br from-green-50 via-white to-emerald-50/50">
+
     <!-- Background -->
-    <div class="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-emerald-50/50 -z-10"></div>
-    
+    <div class="pointer-events-none absolute inset-0 -z-10"></div>
+
     <!-- Floating decorations -->
-    <div class="absolute top-20 right-10 w-32 h-32 bg-green-200/20 rounded-full blur-2xl animate-pulse -z-10"></div>
-    <div class="absolute bottom-20 left-10 w-48 h-48 bg-green-100/30 rounded-full blur-3xl animate-pulse delay-1000 -z-10"></div>
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-      
+    <div class="absolute top-20 right-10 h-32 w-32 rounded-full bg-green-200/30 blur-3xl animate-pulse -z-10"></div>
+    <div class="absolute bottom-20 left-10 h-48 w-48 rounded-full bg-green-100/40 blur-3xl animate-pulse -z-10"></div>
+
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-20 lg:px-8">
+
       <!-- Video Container -->
-      <div class="max-w-4xl mx-auto mb-12">
-        <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-black">
-          <video 
+      <div class="mx-auto mb-12 max-w-4xl">
+        <div class="relative overflow-hidden rounded-2xl bg-black shadow-2xl">
+          <video
             controls
             muted
             playsinline
-            class="w-full aspect-video object-cover"
+            class="aspect-video w-full object-cover"
           >
             <source src={heroVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
-      
+
       <!-- Main Title -->
-      <div class="text-center max-w-4xl mx-auto animate-fade-in">
-        <div class="inline-block bg-green-100/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
-          <span class="text-green-700 text-sm font-medium tracking-wider">🌿 DIGITAL LEARNING HUB</span>
+      <div class="mx-auto max-w-4xl text-center animate-fade-in">
+
+        <div class="mb-6 inline-block rounded-full bg-green-100/80 px-6 py-2 backdrop-blur-sm">
+          <span class="text-sm font-medium tracking-wider text-green-700">
+            🌿 DIGITAL LEARNING HUB
+          </span>
         </div>
-        
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-green-800 leading-tight">
-          HAB PEMBELAJARAN DIGITAL TERBINA DALAM INFRASTRUKTUR
+
+        <h1 class="text-3xl font-bold leading-tight text-green-800 sm:text-4xl md:text-5xl lg:text-6xl">
+          DIGITAL LEARNING HUB BUILT WITHIN INFRASTRUCTURE
         </h1>
-        
+
         <div class="mt-6 flex justify-center">
-          <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-green-100">
-            <span class="text-green-600 text-xl">📱</span>
-            <p class="text-base sm:text-lg md:text-xl text-gray-700 font-light tracking-wide">
-              Imbas, akses dan manfaatkan ilmu – di mana sahaja, bila-bila masa!
+          <div class="inline-flex items-center gap-2 rounded-full border border-green-100 bg-white/80 px-6 py-3 shadow-lg backdrop-blur-sm">
+            <span class="text-xl">📱</span>
+
+            <p class="text-base font-light tracking-wide text-gray-700 sm:text-lg md:text-xl">
+              Scan, access and make use of knowledge – anywhere, anytime!
             </p>
           </div>
         </div>
+
       </div>
-      
+
       <!-- Steps Grid -->
       <div class="mt-16 md:mt-20">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          
-          <!-- KUMPUL -->
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-8">
+
+          <!-- COLLECT -->
           <div class="group relative animate-slide-up" style="animation-delay: 0.1s">
-            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-green-100/50 hover:border-green-300">
+            <div class="rounded-2xl border border-green-100/50 bg-white/90 p-6 shadow-lg backdrop-blur-sm transition-all duration-500 hover:-translate-y-3 hover:border-green-300 hover:shadow-2xl md:p-8">
+
               <div class="text-center">
-                <div class="relative inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md group-hover:shadow-green-200/50">
+
+                <div class="relative mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-green-100 to-emerald-100 shadow-md transition-transform duration-300 group-hover:scale-110">
                   <span class="text-4xl">📚</span>
-                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+
+                  <div class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-xs font-bold text-white">
                     1
                   </div>
                 </div>
-                <h3 class="text-2xl md:text-3xl font-bold text-green-700 tracking-wide group-hover:text-green-600 transition-colors">
-                  KUMPUL
+
+                <h3 class="text-2xl font-bold tracking-wide text-green-700 transition-colors group-hover:text-green-600 md:text-3xl">
+                  COLLECT
                 </h3>
-                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
-                  Kumpulkan bahan pembelajaran digital
+
+                <p class="mt-3 text-sm leading-relaxed text-gray-500">
+                  Collect digital learning materials
                 </p>
+
               </div>
             </div>
           </div>
-          
-          <!-- CIPTA & BINA PRODUK -->
+
+          <!-- CREATE & BUILD PRODUCTS -->
           <div class="group relative animate-slide-up" style="animation-delay: 0.2s">
-            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-green-100/50 hover:border-green-300">
+            <div class="rounded-2xl border border-green-100/50 bg-white/90 p-6 shadow-lg backdrop-blur-sm transition-all duration-500 hover:-translate-y-3 hover:border-green-300 hover:shadow-2xl md:p-8">
+
               <div class="text-center">
-                <div class="relative inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md group-hover:shadow-green-200/50">
+
+                <div class="relative mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-green-100 to-emerald-100 shadow-md transition-transform duration-300 group-hover:scale-110">
                   <span class="text-4xl">🔧</span>
-                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+
+                  <div class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-xs font-bold text-white">
                     2
                   </div>
                 </div>
-                <h3 class="text-2xl md:text-3xl font-bold text-green-700 tracking-wide group-hover:text-green-600 transition-colors">
-                  CIPTA &<br />BINA PRODUK
+
+                <h3 class="text-2xl font-bold tracking-wide text-green-700 transition-colors group-hover:text-green-600 md:text-3xl">
+                  CREATE &amp;<br />BUILD PRODUCTS
                 </h3>
-                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
-                  Cipta dan bina produk inovasi
+
+                <p class="mt-3 text-sm leading-relaxed text-gray-500">
+                  Create and build innovative products
                 </p>
+
               </div>
             </div>
           </div>
-          
-          <!-- NIKMATI KEMUDAHAN -->
+
+          <!-- ENJOY THE CONVENIENCE -->
           <div class="group relative animate-slide-up" style="animation-delay: 0.3s">
-            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-green-100/50 hover:border-green-300">
+            <div class="rounded-2xl border border-green-100/50 bg-white/90 p-6 shadow-lg backdrop-blur-sm transition-all duration-500 hover:-translate-y-3 hover:border-green-300 hover:shadow-2xl md:p-8">
+
               <div class="text-center">
-                <div class="relative inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md group-hover:shadow-green-200/50">
+
+                <div class="relative mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-green-100 to-emerald-100 shadow-md transition-transform duration-300 group-hover:scale-110">
                   <span class="text-4xl">🎯</span>
-                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+
+                  <div class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-xs font-bold text-white">
                     3
                   </div>
                 </div>
-                <h3 class="text-2xl md:text-3xl font-bold text-green-700 tracking-wide group-hover:text-green-600 transition-colors">
-                  NIKMATI KEMUDAHAN
+
+                <h3 class="text-2xl font-bold tracking-wide text-green-700 transition-colors group-hover:text-green-600 md:text-3xl">
+                  ENJOY THE CONVENIENCE
                 </h3>
-                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
-                  Nikmati kemudahan pembelajaran
+
+                <p class="mt-3 text-sm leading-relaxed text-gray-500">
+                  Enjoy convenient learning
                 </p>
+
               </div>
             </div>
           </div>
-          
-          <!-- EKOSISTEM SEKOLAH -->
+
+          <!-- SCHOOL ECOSYSTEM -->
           <div class="group relative animate-slide-up" style="animation-delay: 0.4s">
-            <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-green-100/50 hover:border-green-300">
+            <div class="rounded-2xl border border-green-100/50 bg-white/90 p-6 shadow-lg backdrop-blur-sm transition-all duration-500 hover:-translate-y-3 hover:border-green-300 hover:shadow-2xl md:p-8">
+
               <div class="text-center">
-                <div class="relative inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md group-hover:shadow-green-200/50">
+
+                <div class="relative mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-green-100 to-emerald-100 shadow-md transition-transform duration-300 group-hover:scale-110">
                   <span class="text-4xl">🏫</span>
-                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
+
+                  <div class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-green-500 text-xs font-bold text-white">
                     4
                   </div>
                 </div>
-                <h3 class="text-2xl md:text-3xl font-bold text-green-700 tracking-wide group-hover:text-green-600 transition-colors">
-                  EKOSISTEM SEKOLAH
+
+                <h3 class="text-2xl font-bold tracking-wide text-green-700 transition-colors group-hover:text-green-600 md:text-3xl">
+                  SCHOOL ECOSYSTEM
                 </h3>
-                <p class="mt-3 text-sm text-gray-500 leading-relaxed">
-                  Membina ekosistem sekolah
+
+                <p class="mt-3 text-sm leading-relaxed text-gray-500">
+                  Build a school ecosystem
                 </p>
+
               </div>
             </div>
           </div>
-          
+
         </div>
-        
-        <!-- Tagline: DARI SISA KE LESTARI -->
-        <div class="text-center mt-12 md:mt-16 animate-fade-in" style="animation-delay: 0.5s">
-          <div class="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 md:px-12 py-4 rounded-full shadow-xl shadow-green-600/30">
+
+        <!-- Tagline -->
+        <div class="mt-12 text-center animate-fade-in md:mt-16" style="animation-delay: 0.5s">
+
+          <div class="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 text-white shadow-xl shadow-green-600/30 md:px-12">
+
             <span class="text-2xl md:text-3xl">🌱</span>
-            <p class="text-lg md:text-2xl font-bold tracking-wide">
-              DARI SISA KE LESTARI
+
+            <p class="text-lg font-bold tracking-wide md:text-2xl">
+              FROM WASTE TO SUSTAINABILITY
             </p>
+
           </div>
+
         </div>
+
       </div>
     </div>
   </section>
@@ -153,34 +191,39 @@ import heroVideo from "../assets/eco.mp4";
 
 <style>
   /* Custom animations */
+
   @keyframes fade-in {
     from {
       opacity: 0;
       transform: translateY(-20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   @keyframes slide-up {
     from {
       opacity: 0;
       transform: translateY(40px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   .animate-fade-in {
     animation: fade-in 0.8s ease-out forwards;
   }
-  
+
   .animate-slide-up {
     opacity: 0;
     animation: slide-up 0.6s ease-out forwards;
   }
 </style>
+
+
