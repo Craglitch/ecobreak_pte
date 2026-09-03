@@ -5,7 +5,7 @@ import Card from "../components/Card.astro";
 // Import 3 JPG images
 import anatomyImage from "../assets/anatomi-ecobrick.jpg";
 import sasaranImage from "../assets/sasaran-tahun.jpg";
-import unjuranImage from "../assets/unjuran-tahun.jpg"
+import unjuranImage from "../assets/unjuran-tahun.jpg";
 ---
 
 <Layout>
@@ -14,298 +14,459 @@ import unjuranImage from "../assets/unjuran-tahun.jpg"
     <div class="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-emerald-50/50 -z-10"></div>
     <div class="absolute top-0 right-0 w-96 h-96 bg-green-200/20 rounded-full blur-3xl -z-10"></div>
     <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-100/20 rounded-full blur-3xl -z-10"></div>
-    
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <!-- Header -->
       <div class="text-center mb-12">
+
         <div class="inline-block bg-green-100/80 backdrop-blur-sm px-6 py-2 rounded-full mb-4">
-          <span class="text-green-700 text-sm font-medium tracking-wider">🌿 TENTANG KAMI</span>
+          <span class="text-green-700 text-sm font-medium tracking-wider">
+            🌿 ABOUT US
+          </span>
         </div>
+
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-green-800">
-          Projek EcoBrick SMK Penanti
+          EcoBrick SMK Penanti Project
         </h1>
+
         <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-          Mengubah sisa plastik kepada bahan binaan lestari untuk masa depan yang lebih hijau
+          Transforming plastic waste into sustainable building materials for a greener future
         </p>
+
       </div>
 
       <!-- 3 Infographic Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-        
-        <!-- Card 1: Anatomi EcoBrick -->
-        <Card 
-          title="Anatomi EcoBrick"
-          description="Mengubah sisa berongga menjadi bahan binaan berketumpatan tinggi"
+
+        <!-- Card 1: EcoBrick Anatomy -->
+        <Card
+          title="EcoBrick Anatomy"
+          description="Transforming hollow waste into high-density building materials"
           imageSrc={anatomyImage.src}
-          imageAlt="Anatomi EcoBrick"
-          badge="Infografik"
-          tags={['Struktur', 'Binaan', 'Lestari']}
+          imageAlt="EcoBrick Anatomy"
+          badge="Infographic"
+          tags={['Structure', 'Construction', 'Sustainable']}
         />
 
-        <!-- Card 2: Sasaran Satu Tahun -->
-        <Card 
-          title="Sasaran Satu Tahun"
-          description="Bersama membina masa depan lestari"
+        <!-- Card 2: One-Year Target -->
+        <Card
+          title="One-Year Target"
+          description="Building a sustainable future together"
           imageSrc={sasaranImage.src}
-          imageAlt="Sasaran Satu Tahun"
+          imageAlt="One-Year Target"
           badge="Target"
-          tags={['Matlamat', '2026', 'Hijau']}
+          tags={['Goals', '2026', 'Green']}
         />
 
-        <!-- Card 3: Unjuran Tahun Pertama -->
-        <Card 
-          title="Unjuran Tahun Pertama"
-          description="Mencipta transformasi berskala makro bermula dari tangan pelajar"
+        <!-- Card 3: First-Year Projection -->
+        <Card
+          title="First-Year Projection"
+          description="Creating large-scale transformation starting from students' hands"
           imageSrc={unjuranImage.src}
-          imageAlt="Unjuran Tahun Pertama"
-          badge="Pencapaian"
-          tags={['Statistik', 'Impak', 'Transformasi']}
+          imageAlt="First-Year Projection"
+          badge="Achievement"
+          tags={['Statistics', 'Impact', 'Transformation']}
         />
 
       </div>
 
       <!-- Vision Statement -->
       <div class="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 md:p-12 text-white shadow-xl shadow-green-600/30 mb-12">
+
         <div class="flex items-center gap-4 mb-4">
           <span class="text-4xl">🎯</span>
-          <h2 class="text-2xl md:text-3xl font-bold">Unjuran Tahun Pertama</h2>
+          <h2 class="text-2xl md:text-3xl font-bold">
+            First-Year Projection
+          </h2>
         </div>
+
         <p class="text-green-100 text-lg leading-relaxed">
-          Mencipta transformasi berskala makro bermula dari tangan pelajar.
+          Creating large-scale transformation starting from students' hands.
         </p>
+
         <div class="mt-6 text-sm text-green-200">
-          Dalam tempoh setahun:
+          Within one year:
         </div>
+
       </div>
 
       <!-- Stats Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
-        
+
         <div class="bg-white rounded-2xl p-6 text-center shadow-lg border border-green-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-          <div class="text-3xl md:text-4xl font-bold text-green-700">8,000</div>
-          <div class="text-sm text-gray-600 mt-2">Botol dikitar semula</div>
-          <div class="text-xs text-gray-400 mt-1">(diselamatkan dari tapak pelupusan)</div>
+          <div class="text-3xl md:text-4xl font-bold text-green-700">
+            8,000
+          </div>
+          <div class="text-sm text-gray-600 mt-2">
+            Bottles recycled
+          </div>
+          <div class="text-xs text-gray-400 mt-1">
+            (saved from landfills)
+          </div>
         </div>
 
         <div class="bg-white rounded-2xl p-6 text-center shadow-lg border border-green-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-          <div class="text-3xl md:text-4xl font-bold text-green-700">20</div>
-          <div class="text-sm text-gray-600 mt-2">Bangku EcoBrick</div>
-          <div class="text-xs text-gray-400 mt-1">kukuh siap dipasang</div>
+          <div class="text-3xl md:text-4xl font-bold text-green-700">
+            20
+          </div>
+          <div class="text-sm text-gray-600 mt-2">
+            EcoBrick benches
+          </div>
+          <div class="text-xs text-gray-400 mt-1">
+            strong and ready for installation
+          </div>
         </div>
 
         <div class="bg-white rounded-2xl p-6 text-center shadow-lg border border-green-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-          <div class="text-3xl md:text-4xl font-bold text-green-700">50</div>
-          <div class="text-sm text-gray-600 mt-2">Pasu bunga</div>
-          <div class="text-xs text-gray-400 mt-1">dibina dan dimanfaatkan</div>
+          <div class="text-3xl md:text-4xl font-bold text-green-700">
+            50
+          </div>
+          <div class="text-sm text-gray-600 mt-2">
+            Flower pots
+          </div>
+          <div class="text-xs text-gray-400 mt-1">
+            built and put to use
+          </div>
         </div>
 
         <div class="bg-white rounded-2xl p-6 text-center shadow-lg border border-green-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-          <div class="text-3xl md:text-4xl font-bold text-green-700">300</div>
-          <div class="text-sm text-gray-600 mt-2">Pelajar terlibat</div>
-          <div class="text-xs text-gray-400 mt-1">secara langsung dalam pelaksanaan projek</div>
+          <div class="text-3xl md:text-4xl font-bold text-green-700">
+            300
+          </div>
+          <div class="text-sm text-gray-600 mt-2">
+            Students involved
+          </div>
+          <div class="text-xs text-gray-400 mt-1">
+            directly involved in project implementation
+          </div>
         </div>
 
       </div>
 
-      <!-- Matlamat Akhir -->
+      <!-- Final Goal -->
       <div class="bg-green-50 rounded-2xl p-8 md:p-10 text-center border-2 border-green-200 mb-16">
+
         <span class="text-4xl block mb-3">🏆</span>
-        <h3 class="text-2xl md:text-3xl font-bold text-green-800">Matlamat Akhir</h3>
+
+        <h3 class="text-2xl md:text-3xl font-bold text-green-800">
+          Final Goal
+        </h3>
+
         <p class="text-xl text-green-700 font-semibold mt-2">
-          Menobatkan SMK Penanti dengan status <span class="bg-green-200 px-4 py-1 rounded-full">Sekolah Hijau</span>
+          To achieve <span class="bg-green-200 px-4 py-1 rounded-full">
+            Green School
+          </span>
+          status for SMK Penanti
         </p>
+
       </div>
 
       <!-- Anatomy of Ecobrick -->
       <div class="mb-16">
+
         <div class="text-center mb-8">
-          <h2 class="text-3xl font-bold text-green-800">Anatomi EcoBrick</h2>
-          <p class="text-gray-600 mt-2">Mengubah sisa berongga menjadi bahan binaan berketumpatan tinggi</p>
+
+          <h2 class="text-3xl font-bold text-green-800">
+            EcoBrick Anatomy
+          </h2>
+
+          <p class="text-gray-600 mt-2">
+            Transforming hollow waste into high-density building materials
+          </p>
+
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <!-- Lapisan Luar -->
+
+          <!-- Outer Layer -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-green-600">
+
             <h3 class="text-xl font-bold text-green-800 flex items-center gap-2">
-              <span>🛡️</span> Lapisan Luar (Cengkerang)
+              <span>🛡️</span>
+              Outer Layer (Shell)
             </h3>
+
             <p class="text-gray-600 mt-3 leading-relaxed">
-              Botol plastik terpakai yang bertindak sebagai catuan kalis cuaca. Pelajar bertanggungjawab mengumpul bahan ini secara aktif.
+              A used plastic bottle that acts as a weather-resistant container.
+              Students are responsible for actively collecting these materials.
             </p>
+
           </div>
 
-          <!-- Teras Dalaman -->
+          <!-- Inner Core -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-emerald-600">
+
             <h3 class="text-xl font-bold text-green-800 flex items-center gap-2">
-              <span>🧱</span> Teras Dalaman (Bahan Mampat)
+              <span>🧱</span>
+              Inner Core (Compacted Material)
             </h3>
+
             <p class="text-gray-600 mt-3 leading-relaxed">
-              Sisa plastik sekali guna dan pembungkus makanan yang disusun padat.
+              Single-use plastic waste and food packaging materials that are tightly compacted.
             </p>
+
           </div>
 
-          <!-- Mekanik Pemadatan -->
+          <!-- Compaction Mechanics -->
           <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-green-600 md:col-span-2">
+
             <h3 class="text-xl font-bold text-green-800 flex items-center gap-2">
-              <span>⚡</span> Mekanik Pemadatan
+              <span>⚡</span>
+              Compaction Mechanics
             </h3>
+
             <p class="text-gray-600 mt-3 leading-relaxed">
-              Daya mampatan maksimum menggunakan kayu pemekat, menghilangkan ruang udara untuk mencapai integriti struktur setara batu bata atau konkrit.
+              Maximum compression using a compacting stick, removing air spaces
+              to achieve structural integrity comparable to bricks or concrete.
             </p>
+
           </div>
 
         </div>
       </div>
 
-      <!-- Aplikasi Ecobrick -->
+      <!-- EcoBrick Applications -->
       <div class="mb-16">
-        <h2 class="text-3xl font-bold text-green-800 text-center mb-8">Aplikasi EcoBrick dalam Pembinaan</h2>
-        
+
+        <h2 class="text-3xl font-bold text-green-800 text-center mb-8">
+          EcoBrick Applications in Construction
+        </h2>
+
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          
+
           <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-green-100">
             <span class="text-4xl block mb-3">🪑</span>
-            <h4 class="font-bold text-green-700">Bangku Taman</h4>
-            <p class="text-xs text-gray-500 mt-1">Kukuh, tahan lasak dan mesra alam</p>
+            <h4 class="font-bold text-green-700">
+              Garden Benches
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              Strong, durable and eco-friendly
+            </p>
           </div>
 
           <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-green-100">
             <span class="text-4xl block mb-3">🌺</span>
-            <h4 class="font-bold text-green-700">Pasu Bunga</h4>
-            <p class="text-xs text-gray-500 mt-1">Ringan, cantik dan boleh dikitar semula</p>
+            <h4 class="font-bold text-green-700">
+              Flower Pots
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              Lightweight, attractive and recyclable
+            </p>
           </div>
 
           <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-green-100">
             <span class="text-4xl block mb-3">🧱</span>
-            <h4 class="font-bold text-green-700">Tembok Landskap</h4>
-            <p class="text-xs text-gray-500 mt-1">Stabil, kuat dan cegah hakisan tanah</p>
+            <h4 class="font-bold text-green-700">
+              Landscape Walls
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              Stable, strong and helps prevent soil erosion
+            </p>
           </div>
 
           <div class="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-green-100">
             <span class="text-4xl block mb-3">📚</span>
-            <h4 class="font-bold text-green-700">Sudut Bacaan & Hiasan</h4>
-            <p class="text-xs text-gray-500 mt-1">Kreatif, fungsional dan menceriakan</p>
+            <h4 class="font-bold text-green-700">
+              Reading &amp; Decoration Corners
+            </h4>
+            <p class="text-xs text-gray-500 mt-1">
+              Creative, functional and vibrant
+            </p>
           </div>
 
         </div>
       </div>
 
-      <!-- Kelebihan Ecobrick -->
+      <!-- EcoBrick Benefits -->
       <div class="mb-16">
-        <h2 class="text-3xl font-bold text-green-800 text-center mb-8">Kelebihan EcoBrick</h2>
-        
+
+        <h2 class="text-3xl font-bold text-green-800 text-center mb-8">
+          Benefits of EcoBrick
+        </h2>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          
+
           <div class="bg-white rounded-2xl p-6 shadow-lg text-center border-t-4 border-green-600">
             <span class="text-4xl block mb-3">🏗️</span>
-            <h4 class="font-bold text-green-700">Kukuh & Tahan Lama</h4>
-            <p class="text-sm text-gray-500 mt-1">Struktur stabil seperti batu bata atau konkrit</p>
+            <h4 class="font-bold text-green-700">
+              Strong &amp; Durable
+            </h4>
+            <p class="text-sm text-gray-500 mt-1">
+              Stable structure similar to bricks or concrete
+            </p>
           </div>
 
           <div class="bg-white rounded-2xl p-6 shadow-lg text-center border-t-4 border-emerald-600">
             <span class="text-4xl block mb-3">🌍</span>
-            <h4 class="font-bold text-green-700">Mesra Alam</h4>
-            <p class="text-sm text-gray-500 mt-1">Mengurangkan sisa plastik ke tapak pelupusan</p>
+            <h4 class="font-bold text-green-700">
+              Eco-Friendly
+            </h4>
+            <p class="text-sm text-gray-500 mt-1">
+              Reduces plastic waste sent to landfills
+            </p>
           </div>
 
           <div class="bg-white rounded-2xl p-6 shadow-lg text-center border-t-4 border-green-600">
             <span class="text-4xl block mb-3">💰</span>
-            <h4 class="font-bold text-green-700">Jimat Kos</h4>
-            <p class="text-sm text-gray-500 mt-1">Alternatif binaan yang lebih ekonomi</p>
+            <h4 class="font-bold text-green-700">
+              Cost Saving
+            </h4>
+            <p class="text-sm text-gray-500 mt-1">
+              A more economical alternative for construction
+            </p>
           </div>
 
           <div class="bg-white rounded-2xl p-6 shadow-lg text-center border-t-4 border-emerald-600">
             <span class="text-4xl block mb-3">🤝</span>
-            <h4 class="font-bold text-green-700">Libat Urus Komuniti</h4>
-            <p class="text-sm text-gray-500 mt-1">Pelajar, guru & komuniti bekerjasama</p>
+            <h4 class="font-bold text-green-700">
+              Community Engagement
+            </h4>
+            <p class="text-sm text-gray-500 mt-1">
+              Students, teachers and the community work together
+            </p>
           </div>
 
         </div>
       </div>
 
-      <!-- Sasaran Satu Tahun -->
+      <!-- One-Year Target -->
       <div class="mb-16">
+
         <div class="bg-gradient-to-r from-green-700 to-emerald-700 rounded-2xl p-8 md:p-12 text-white shadow-xl">
-          <h2 class="text-3xl font-bold text-center mb-8">Sasaran Satu Tahun</h2>
-          <p class="text-center text-green-200 mb-8">Bersama membina masa depan lestari.</p>
+
+          <h2 class="text-3xl font-bold text-center mb-8">
+            One-Year Target
+          </h2>
+
+          <p class="text-center text-green-200 mb-8">
+            Building a sustainable future together.
+          </p>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
+
             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
               <span class="text-4xl block mb-3">♻️</span>
-              <h4 class="font-bold text-white">Sisa Plastik</h4>
-              <p class="text-green-200 text-sm mt-1">Mengumpul sisa plastik seperti botol, pembalut dan bahan buangan lain</p>
+              <h4 class="font-bold text-white">
+                Plastic Waste
+              </h4>
+              <p class="text-green-200 text-sm mt-1">
+                Collecting plastic waste such as bottles, wrappers and other discarded materials
+              </p>
             </div>
 
             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
               <span class="text-4xl block mb-3">🌿</span>
-              <h4 class="font-bold text-white">Hijaukan Persekitaran</h4>
-              <p class="text-green-200 text-sm mt-1">Menggunakan EcoBrick untuk pasu bunga dan projek landskap sekolah</p>
+              <h4 class="font-bold text-white">
+                Greener Environment
+              </h4>
+              <p class="text-green-200 text-sm mt-1">
+                Using EcoBricks for flower pots and school landscaping projects
+              </p>
             </div>
 
             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
               <span class="text-4xl block mb-3">🏫</span>
-              <h4 class="font-bold text-white">Komuniti Lestari</h4>
-              <p class="text-green-200 text-sm mt-1">Kita bina hari ini, untuk masa depan lestari!</p>
+              <h4 class="font-bold text-white">
+                Sustainable Community
+              </h4>
+              <p class="text-green-200 text-sm mt-1">
+                We build today for a sustainable future!
+              </p>
             </div>
 
           </div>
         </div>
       </div>
 
-      <!-- Target & Aktiviti -->
+      <!-- Target & Activities -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-        
+
         <div class="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+
           <h3 class="text-2xl font-bold text-green-800 flex items-center gap-2 mb-4">
-            <span>🎯</span> Target
+            <span>🎯</span>
+            Target
           </h3>
-          <p class="text-gray-700 font-semibold">Sasaran Utama</p>
-          <p class="text-gray-600 mt-1">Membina komuniti sekolah yang hijau dan lestari melalui projek EcoBrick.</p>
-          
+
+          <p class="text-gray-700 font-semibold">
+            Main Target
+          </p>
+
+          <p class="text-gray-600 mt-1">
+            Building a green and sustainable school community through the EcoBrick project.
+          </p>
+
           <div class="mt-4">
-            <p class="text-sm font-semibold text-green-700">Bimbingan:</p>
+
+            <p class="text-sm font-semibold text-green-700">
+              Guidance:
+            </p>
+
             <div class="flex flex-wrap gap-2 mt-2">
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Guru</span>
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Komuniti</span>
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Kulpi</span>
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Cuci</span>
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Kering</span>
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Mampat</span>
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Bina</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Teachers</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Community</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Collect</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Clean</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Dry</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Compact</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Build</span>
             </div>
+
           </div>
         </div>
 
         <div class="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+
           <h3 class="text-2xl font-bold text-green-800 flex items-center gap-2 mb-4">
-            <span>📋</span> Aktiviti & Impak
+            <span>📋</span>
+            Activities &amp; Impact
           </h3>
-          
+
           <div class="space-y-3">
+
             <div class="flex items-start gap-3">
               <span class="text-green-600">✅</span>
+
               <div>
-                <p class="font-medium text-gray-700">Perkongsian bersih</p>
-                <p class="text-sm text-gray-500">Komuniti lestari</p>
+                <p class="font-medium text-gray-700">
+                  Knowledge Sharing
+                </p>
+
+                <p class="text-sm text-gray-500">
+                  Sustainable community
+                </p>
               </div>
             </div>
+
             <div class="flex items-start gap-3">
               <span class="text-green-600">✅</span>
+
               <div>
-                <p class="font-medium text-gray-700">Pendidikan alam sekitar</p>
-                <p class="text-sm text-gray-500">Kesedaran pelajar</p>
+                <p class="font-medium text-gray-700">
+                  Environmental Education
+                </p>
+
+                <p class="text-sm text-gray-500">
+                  Student awareness
+                </p>
               </div>
             </div>
+
             <div class="flex items-start gap-3">
               <span class="text-green-600">✅</span>
+
               <div>
-                <p class="font-medium text-gray-700">Projek infrastruktur hijau</p>
-                <p class="text-sm text-gray-500">Bangku, pasu dan landskap</p>
+                <p class="font-medium text-gray-700">
+                  Green Infrastructure Projects
+                </p>
+
+                <p class="text-sm text-gray-500">
+                  Benches, flower pots and landscaping
+                </p>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -313,36 +474,67 @@ import unjuranImage from "../assets/unjuran-tahun.jpg"
 
       <!-- Bottom Section -->
       <div class="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 md:p-12 text-white shadow-xl shadow-green-600/30 text-center">
+
         <div class="flex flex-wrap justify-center gap-6 md:gap-12">
+
           <div>
-            <div class="text-4xl font-bold">300</div>
-            <div class="text-sm text-green-200 mt-1">Pelajar Aktif</div>
+            <div class="text-4xl font-bold">
+              300
+            </div>
+            <div class="text-sm text-green-200 mt-1">
+              Active Students
+            </div>
           </div>
+
           <div>
-            <div class="text-4xl font-bold">♻️</div>
-            <div class="text-sm text-green-200 mt-1">Kurangkan Sisa Plastik</div>
+            <div class="text-4xl font-bold">
+              ♻️
+            </div>
+            <div class="text-sm text-green-200 mt-1">
+              Reduce Plastic Waste
+            </div>
           </div>
+
           <div>
-            <div class="text-4xl font-bold">💰</div>
-            <div class="text-sm text-green-200 mt-1">Jimati Sumber</div>
+            <div class="text-4xl font-bold">
+              💰
+            </div>
+            <div class="text-sm text-green-200 mt-1">
+              Save Resources
+            </div>
           </div>
+
           <div>
-            <div class="text-4xl font-bold">🌍</div>
-            <div class="text-sm text-green-200 mt-1">Pelihara Alam Sekitar</div>
+            <div class="text-4xl font-bold">
+              🌍
+            </div>
+            <div class="text-sm text-green-200 mt-1">
+              Protect the Environment
+            </div>
           </div>
+
           <div>
-            <div class="text-4xl font-bold">🤝</div>
-            <div class="text-sm text-green-200 mt-1">Bina Komuniti Lestari</div>
+            <div class="text-4xl font-bold">
+              🤝
+            </div>
+            <div class="text-sm text-green-200 mt-1">
+              Build a Sustainable Community
+            </div>
           </div>
+
         </div>
-        
+
         <div class="mt-8 pt-8 border-t border-green-400/30">
+
           <p class="text-xl md:text-2xl font-bold tracking-wide">
-            "DARI SISA KE LESTARI, BERSAMA MEMBINA MASA DEPAN!"
+            "FROM WASTE TO SUSTAINABILITY, TOGETHER WE BUILD THE FUTURE!"
           </p>
+
         </div>
+
       </div>
 
     </div>
   </section>
 </Layout>
+
