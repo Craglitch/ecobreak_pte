@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
+import ProPost from "../assets/result.jpg"
 const researchData = [
   {
     week: "Week 1",
@@ -356,6 +356,76 @@ const totalEcobricks = 57;
 
       </div>
 
+      <!-- Result Image Showcase -->
+<div class="mt-20 animate-fade-in">
+
+  <div class="rounded-3xl border border-green-100 bg-white/90 p-6 shadow-xl backdrop-blur-sm md:p-10">
+
+    <div class="text-center mb-8">
+
+      <div class="text-5xl">
+        🗺️
+      </div>
+
+      <h2 class="mt-4 text-3xl font-bold text-green-800 md:text-4xl">
+        EcoBrick Result Mapping
+      </h2>
+
+      <p class="mt-3 text-gray-600">
+        Visual documentation of EcoBrick production results and research outcomes.
+      </p>
+
+    </div>
+
+
+    <div class="overflow-hidden rounded-3xl shadow-lg border border-green-100">
+
+      <img
+        src={ProPost.src}
+        alt="EcoBrick Result Mapping"
+        class="w-full object-cover transition duration-500 hover:scale-105"
+      />
+
+    </div>
+
+
+    <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+
+      <div class="rounded-2xl bg-green-50 p-5 text-center">
+        <p class="text-sm text-gray-500">
+          Plastic Waste
+        </p>
+        <p class="mt-2 text-2xl font-bold text-green-700">
+          10.471 kg
+        </p>
+      </div>
+
+
+      <div class="rounded-2xl bg-green-50 p-5 text-center">
+        <p class="text-sm text-gray-500">
+          Bottles Collected
+        </p>
+        <p class="mt-2 text-2xl font-bold text-green-700">
+          129
+        </p>
+      </div>
+
+
+      <div class="rounded-2xl bg-green-50 p-5 text-center">
+        <p class="text-sm text-gray-500">
+          EcoBricks Created
+        </p>
+        <p class="mt-2 text-2xl font-bold text-green-700">
+          57
+        </p>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
 
       <!-- Research Conclusion -->
       <div class="mt-20 animate-fade-in">
