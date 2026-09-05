@@ -3,7 +3,7 @@ const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/' || currentPath === '';
 const isAbout = currentPath === '/about';
 const isSej = currentPath === '/sej';
-const isUp = currentPath === '/update'
+const isUp = currentPath === '/update';
 
 // Import logo from src/assets
 import logo from "../assets/logo.jpg";
@@ -15,7 +15,6 @@ import logo from "../assets/logo.jpg";
       
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center gap-2 group">
-          <!-- Use imported logo -->
           <img 
             src={logo.src} 
             alt="EcoBrick Logo" 
@@ -30,8 +29,10 @@ import logo from "../assets/logo.jpg";
         </a>
       </div>
 
+
       <!-- Desktop Navigation -->
       <div class="hidden md:flex space-x-1 sm:space-x-2">
+
         <a 
           href="/" 
           class:list={[
@@ -45,6 +46,7 @@ import logo from "../assets/logo.jpg";
           🏠 Home
         </a>
 
+
         <a 
           href="/about" 
           class:list={[
@@ -57,7 +59,8 @@ import logo from "../assets/logo.jpg";
         >
           ℹ️ About
         </a>
-        
+
+
         <a 
           href="/sej" 
           class:list={[
@@ -70,7 +73,26 @@ import logo from "../assets/logo.jpg";
         >
           📜 History
         </a>
+
+
+        <!-- ADDED PROGRESS -->
+        <a 
+          href="/update" 
+          class:list={[
+            'px-3 sm:px-5 py-2 rounded-full text-sm sm:text-base font-medium transition-all duration-300',
+            'tracking-wide',
+            isUp
+              ? 'bg-green-800 text-white shadow-lg shadow-green-800/20' 
+              : 'text-green-700 hover:bg-green-50 hover:text-green-900'
+          ]}
+        >
+          📈 Progress
+        </a>
+
+
       </div>
+
+
 
       <!-- Mobile Hamburger Menu -->
       <div class="md:hidden">
@@ -87,9 +109,13 @@ import logo from "../assets/logo.jpg";
 
     </div>
 
+
     <!-- Mobile Navigation Menu -->
     <div id="mobile-menu" class="md:hidden hidden py-2 border-t border-green-100/30">
+
       <div class="flex flex-col space-y-1">
+
+
         <a 
           href="/" 
           class:list={[
@@ -103,6 +129,7 @@ import logo from "../assets/logo.jpg";
           🏠 Home
         </a>
 
+
         <a 
           href="/about" 
           class:list={[
@@ -115,7 +142,8 @@ import logo from "../assets/logo.jpg";
         >
           ℹ️ About
         </a>
-        
+
+
         <a 
           href="/sej" 
           class:list={[
@@ -126,15 +154,32 @@ import logo from "../assets/logo.jpg";
               : 'text-green-700 hover:bg-green-50 hover:text-green-900'
           ]}
         >
-          📜 Sejarah
+          📜 HISTORY
         </a>
+
+
+        <a 
+          href="/update" 
+          class:list={[
+            'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300',
+            'tracking-wide',
+            isUp
+              ? 'bg-green-800 text-white' 
+              : 'text-green-700 hover:bg-green-50 hover:text-green-900'
+          ]}
+        >
+          📈 Progress
+        </a>
+
+
       </div>
     </div>
+
   </div>
 </nav>
 
+
 <script>
-  // Mobile menu toggle functionality
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
 
@@ -143,8 +188,8 @@ import logo from "../assets/logo.jpg";
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Close menu when a link is clicked
     const mobileLinks = mobileMenu.querySelectorAll('a');
+
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
